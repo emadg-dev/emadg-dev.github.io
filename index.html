@@ -25,7 +25,6 @@
         .dark-mode .header p,
         .dark-mode .section h2,
         .dark-mode .section p,
-        .dark-mode .skills li,
         .dark-mode .Education li,
         .dark-mode .contact-info a,
         .dark-mode .oskills li h3 {
@@ -33,8 +32,6 @@
         }
 
         .skills li {
-        background-color: #a0aec0;
-        color: #1a202c;
         transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
         }
 
@@ -46,10 +43,7 @@
             color: #c5ceda;
         }
 
-        .dark-mode .skills li {
-            background-color: #a0aec0;
-            color: #1a202c;
-        }
+        
 
         .dark-mode .contact-info a {
             color: #a0aec0;
@@ -60,14 +54,9 @@
             color: #1a202c;
         }
 
-        .dark-mode .navigation {
-            background-color: #2d3748;
-            color: #a0aec0;
-        }
-
-        .dark-mode .card {
-            background-color: #a0aec0;
-            color: #1a202c;
+        .dark-mode .nav {
+            background-color: rgba(45, 55, 72, 0.3);
+            
         }
 
         .animate-fade-in {
@@ -104,8 +93,8 @@
     
     
 
-    <nav class="mx-auto navigation shadow-lg backdrop-blur-sm fixed w-full top-0 z-10">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <nav class="mx-auto nav shadow-lg backdrop-blur-sm fixed w-full top-0 z-10">
+        <div class="nav mx-auto px-4 py-4 flex justify-between items-center">
             <img src="https://avatars.githubusercontent.com/u/87330040?v=4" 
             class="maximize w-14 h-14 rounded-full toggle-button 
             hover:-translate-y-1 hover:scale-105 duration-300"
@@ -171,37 +160,37 @@
                     </h2>
                     <ul class="skills list-none p-0 transition-all duration-500">
                         <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class="toggle-button bg-green-500 rounded-full text-white m-0 py-2 px-4 p-0">C#</button>
+                            <button class=" bg-green-500 rounded-full text-white m-0 py-2 px-4 p-0">C#</button>
                         </li>
                         <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class="toggle-button rounded-full bg-green-500 text-white m-0 py-2 px-4 p-0">C</button>
+                            <button class=" rounded-full bg-green-500 text-white m-0 py-2 px-4 p-0">C</button>
                         </li>
                         <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class="toggle-button rounded-full bg-green-500 text-white m-0 py-2 px-4 p-0">Python</button>
+                            <button class=" rounded-full bg-green-500 text-white m-0 py-2 px-4 p-0">Python</button>
                         </li>
                         <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class="toggle-button rounded-full bg-green-500 text-white m-0 py-2 px-4 p-0">SQL</button>
+                            <button class=" rounded-full bg-green-500 text-white m-0 py-2 px-4 p-0">SQL</button>
                         </li>
                         <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class="toggle-button rounded-full bg-blue-500 text-white m-0 py-2 px-4 p-0">.NET</button>
+                            <button class=" rounded-full bg-blue-500 text-white m-0 py-2 px-4 p-0">.NET</button>
                         </li>
                         <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class="toggle-button rounded-full bg-blue-500 text-white m-0 py-2 px-4 p-0">Django</button>
+                            <button class=" rounded-full bg-blue-500 text-white m-0 py-2 px-4 p-0">Django</button>
                         </li>
                         <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class="toggle-button rounded-full bg-blue-500 text-white m-0 py-2 px-4 p-0">WPF</button>
+                            <button class=" rounded-full bg-blue-500 text-white m-0 py-2 px-4 p-0">WPF</button>
                         </li>
                         <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class="toggle-button rounded-full bg-orange-500 text-white m-0 py-2 px-4 p-0">HTML</button>
+                            <button class=" rounded-full bg-orange-500 text-white m-0 py-2 px-4 p-0">HTML</button>
                         </li>
                         <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class="toggle-button rounded-full bg-orange-500 text-white m-0 py-2 px-4 p-0">CSS</button>
+                            <button class=" rounded-full bg-orange-500 text-white m-0 py-2 px-4 p-0">CSS</button>
                         </li>
                         <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class="toggle-button rounded-full bg-purple-500 text-white m-0 py-2 px-4 p-0">Tailwind</button>
+                            <button class=" rounded-full bg-purple-500 text-white m-0 py-2 px-4 p-0">Tailwind</button>
                         </li>
                         <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class="toggle-button rounded-full bg-purple-500 text-white m-0 py-2 px-4 p-0">Bootstrap</button>
+                            <button class=" rounded-full bg-purple-500 text-white m-0 py-2 px-4 p-0">Bootstrap</button>
                         </li>
                     </ul>
                 </div>
