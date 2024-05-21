@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            transition: background-color 0.5s ease, color 0.5s ease;
+    position: relative;
+}
         .dark-mode {
             background-color: #1a202c;
             color: #a0aec0;
@@ -14,13 +21,29 @@
         .dark-mode .container {
             background-color: #2d3748;
         }
-        .dark-mode .header h1,
+
         .dark-mode .header p,
         .dark-mode .section h2,
         .dark-mode .section p,
         .dark-mode .skills li,
-        .dark-mode .contact-info a {
+        .dark-mode .Education li,
+        .dark-mode .contact-info a,
+        .dark-mode .oskills li h3 {
             color: #a0aec0;
+        }
+
+        .skills li {
+        background-color: #a0aec0;
+        color: #1a202c;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        .skills li:hover {
+        transform: translateY(-1px) scale(1.05);
+        }
+
+        .dark-mode .header h1 {
+            color: #c5ceda;
         }
 
         .dark-mode .skills li {
@@ -50,10 +73,6 @@
         .animate-fade-in {
             animation: fadeIn 1s ease-in-out;
         }
-        
-       
-
-
 
         @keyframes fadeIn {
             from {
@@ -63,58 +82,67 @@
                 opacity: 1;
             }
         }
+
+        .maximize{
+           
+            transition: width 0.3s ease-in-out;
+        }
+
+
+        .maximize.maximized{
+            width: 500px;
+            height: 500px;
+        }
+
+
+
     </style>
 </head>
-<body class="  bg-gray-100  text-gray-900 animate-fade-in">
-    <nav class=" mx-auto navigation dark:bg-gray-200 shadow-lg
-     backdrop-blur-sm  fixed margin:15; w-full top-0 z-10 
-     ">
-        <div class="container mx-auto px-4 py-4 flex justify-between
-         items-center">
-            <div class=" text-2xl font-semibold ml-8 p-2 
-             rounded-lg  ">
 
-            <h2 class="h2 text-lg font-semibold 
-            ">
-                EMAD'S CV</h3>
+
+<body class="bg-gray-100 text-gray-900 animate-fade-in">
+    
+    
+
+    <nav class="mx-auto navigation shadow-lg backdrop-blur-sm fixed w-full top-0 z-10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <img src="https://avatars.githubusercontent.com/u/87330040?v=4" 
+            class="maximize w-14 h-14 rounded-full toggle-button 
+            hover:-translate-y-1 hover:scale-105 duration-300"
+            id="maximize-img" onclick="toggleMaximize()" 
+            alt="" >
+            <div class="text-2xl font-semibold ml-8  p-2 rounded-lg">
+                <h2 class="text-lg font-semibold">EMAD'S CV</h2>
             </div>
             <div>
-                <button id="theme-btn" 
-                    class=" toggle-button p-2 
-                    shadow-lg
-                    rounded-lg bg-gray-500 text-white" 
-                    onclick="toggleTheme()">Dark Theme
-                </button>
+                <button id="theme-btn"
+                 class=" toggle-button hover:-translate-y-1 hover:scale-105 duration-300
+                 p-2 shadow-lg rounded-lg bg-gray-500 text-white" onclick="toggleTheme()">Dark Theme</button>
             </div>
         </div>
     </nav>
-        <div class=" mx-auto p-4  transition-all duration-500">
-            <main>
-
-            
-            <div class=" container  mx-auto p-8 rounded-lg mb-4  
-            mt-20  transition-all duration-500">
+    <div class="mx-auto p-4 transition-all duration-500">
+        <main>
+            <div class="container mx-auto p-8 rounded-lg mb-4 mt-20 transition-all duration-500">
                 <div class="header text-center mb-8">
-                    <h1 class="text-4xl font-bold">EMAD GHOSI</h1>
+                    <h1 class="text-4xl font-bold mb-4">EMAD GHOSI</h1>
                     <p class="text-xl text-gray-500">Desktop/Web Developer | SQL Manager | Technical Support Specialist</p>
                 </div>
                 <div class="section mb-8">
-                    <h2 class="text-2xl font-semibold  border-b-2 border-blue-500 pb-2 mb-4">About Me</h2>
-                    <p>Enthusiastic software developer with over 4 years of experience in .Net development.
-                        Skilled in various programming languages and technologies, I'm excited to face new challenges and use new tools to solve them.</p>
+                    <h2 class="text-2xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">About Me</h2>
+                    <p class="text-lg text-gray-600">
+                        Enthusiastic software developer with <b>4+ years</b> of experience in .Net development. Skilled in <b>various programming languages</b> and technologies, I'm a resourceful <b>problem-solver</b> who thrives in any environment. I bring a strong <b>work ethic</b> and passion for <b>innovation</b> to tackle new challenges and utilize available tools to find <b>optimal solutions</b>.
+                    </p>
                 </div>
                 <div class="section mb-8">
-                    <h2 class="text-2xl font-semibold border-b-2 
-                    border-blue-500 pb-2 mb-4">Experience</h2>
+                    <h2 class="text-2xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">Experience</h2>
                     <div class="relative">
-                        <div class="border-r-2 border-gray-200 
-                        absolute h-full top-0" style="left: 20px">
-                    </div>
+                        <div class="border-r-2 border-gray-200 absolute h-full top-0" style="left: 20px"></div>
                         <ul class="list-none m-0 p-0">
                             <li class="mb-8 ml-6">
                                 <div class="absolute -left-1.5 mt-1.5 w-3 h-3 bg-blue-500 rounded-full"></div>
                                 <div class="ml-8 p-4 bg-gray-100 dark:bg-gray-600 rounded-lg shadow transition-all duration-500">
-                                    <span class="text-sm text-gray-500 dark:text-gray-400">1401 - Present</span>
+                                    <span class="underline text-sm text-gray-200 dark:text-gray-200">1401 - Present</span>
                                     <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">.Net Developer at Sarvfaraz</h3>
                                     <p class="text-gray-700 dark:text-gray-300">Single handedly designing, developing, coding and maintaining "Eren" Beauty Salon Management desktop application.</p>
                                 </div>
@@ -122,7 +150,7 @@
                             <li class="mb-8 ml-6">
                                 <div class="absolute -left-1.5 mt-1.5 w-3 h-3 bg-blue-500 rounded-full"></div>
                                 <div class="ml-8 p-4 bg-gray-100 dark:bg-gray-600 rounded-lg shadow transition-all duration-500">
-                                    <span class="text-sm text-gray-500 dark:text-gray-400">1400 - 1401</span>
+                                    <span class="underline text-sm text-gray-200 dark:text-gray-200">1400 - 1401</span>
                                     <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Software and Network Technical Support Specialist at Sarvfaraz</h3>
                                     <p class="text-gray-700 dark:text-gray-300">Providing on-site and remote support for customers of "Sepidz" Software.</p>
                                 </div>
@@ -132,67 +160,86 @@
                 </div>
                 <div class="section mb-8">
                     <h2 class="text-2xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">Education</h2>
-                    <p class="font-semibold">Bachelor of Computer Engineering, Azad University, Science and Research Branch (1398 - 1403)</p>
-                    <p class="font-semibold">C# Course Educate of Technical Institute of Tehran</p>
-                </div>
-                <div class="section mb-8">
-                    <h2 class="text-2xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">Skills</h2>
-                    <ul class="skills list-none p-0 transition-all duration-500">
-                        <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class=" toggle-button bg-gray-600 rounded-full text-white m-0 py-2 px-4 p-0">
-                                C#
-                            </button>
-                        </li>
-                        <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class=" toggle-button rounded-full bg-gray-600 text-white m-0 py-2 px-4 p-0">
-                                C
-                            </button>
-                        </li>                        
-                        <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class="toggle-button rounded-full bg-gray-600 text-white m-0 py-2 px-4 p-0">
-                                Python
-                            </button>
-                        </li>        
-                        <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class="toggle-button rounded-full bg-gray-600 text-white m-0 py-2 px-4 p-0">
-                                SQL
-                            </button>
-                        </li>   
-                        <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class="toggle-button rounded-full bg-gray-600 text-white m-0 py-2 px-4 p-0">
-                                .NET
-                            </button>
-                        </li>   
-                        <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class="toggle-button rounded-full bg-gray-600 text-white m-0 py-2 px-4 p-0">
-                                Django
-                            </button>
-                        </li>
-                        <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class="toggle-button rounded-full bg-gray-600 text-white m-0 py-2 px-4 p-0">
-                                HTML
-                            </button>
-                        </li>
-                        <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class="toggle-button rounded-full bg-gray-600 text-white m-0 py-2 px-4 p-0">
-                                CSS
-                            </button>
-                        </li>
-                        <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class="toggle-button rounded-full bg-gray-600 text-white m-0 py-2 px-4 p-0">
-                                Tailwind
-                            </button>
-                        </li>
-                        <li class="inline-block rounded-full mr-2 mb-2">
-                            <button class="toggle-button rounded-full bg-gray-600 text-white m-0 py-2 px-4 p-0">
-                                Bootstrap
-                            </button>
-                        </li>
-
+                    <ul class="Education list-none p-0 transition-all duration-500">
+                        <li class="text-lg mb-2 text-gray-900 dark:text-gray-600">- Bachelor of Computer Engineering, Azad University, Science and Research Branch (1398 - 1403)</li>
+                        <li class="text-lg mb-2 text-gray-900 dark:text-gray-600">- C# Course Educate from Technical Institute of Tehran</li>
                     </ul>
                 </div>
-                
-                  
+                <div class="section mb-8">
+                    <h2 class="text-2xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">
+                        Languages and Tools
+                    </h2>
+                    <ul class="skills list-none p-0 transition-all duration-500">
+                        <li class="inline-block rounded-full mr-2 mb-2">
+                            <button class="toggle-button bg-green-500 rounded-full text-white m-0 py-2 px-4 p-0">C#</button>
+                        </li>
+                        <li class="inline-block rounded-full mr-2 mb-2">
+                            <button class="toggle-button rounded-full bg-green-500 text-white m-0 py-2 px-4 p-0">C</button>
+                        </li>
+                        <li class="inline-block rounded-full mr-2 mb-2">
+                            <button class="toggle-button rounded-full bg-green-500 text-white m-0 py-2 px-4 p-0">Python</button>
+                        </li>
+                        <li class="inline-block rounded-full mr-2 mb-2">
+                            <button class="toggle-button rounded-full bg-green-500 text-white m-0 py-2 px-4 p-0">SQL</button>
+                        </li>
+                        <li class="inline-block rounded-full mr-2 mb-2">
+                            <button class="toggle-button rounded-full bg-blue-500 text-white m-0 py-2 px-4 p-0">.NET</button>
+                        </li>
+                        <li class="inline-block rounded-full mr-2 mb-2">
+                            <button class="toggle-button rounded-full bg-blue-500 text-white m-0 py-2 px-4 p-0">Django</button>
+                        </li>
+                        <li class="inline-block rounded-full mr-2 mb-2">
+                            <button class="toggle-button rounded-full bg-blue-500 text-white m-0 py-2 px-4 p-0">WPF</button>
+                        </li>
+                        <li class="inline-block rounded-full mr-2 mb-2">
+                            <button class="toggle-button rounded-full bg-orange-500 text-white m-0 py-2 px-4 p-0">HTML</button>
+                        </li>
+                        <li class="inline-block rounded-full mr-2 mb-2">
+                            <button class="toggle-button rounded-full bg-orange-500 text-white m-0 py-2 px-4 p-0">CSS</button>
+                        </li>
+                        <li class="inline-block rounded-full mr-2 mb-2">
+                            <button class="toggle-button rounded-full bg-purple-500 text-white m-0 py-2 px-4 p-0">Tailwind</button>
+                        </li>
+                        <li class="inline-block rounded-full mr-2 mb-2">
+                            <button class="toggle-button rounded-full bg-purple-500 text-white m-0 py-2 px-4 p-0">Bootstrap</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="section mb-8">
+                    <h2 class="text-2xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">Other Skills</h2>
+                    <ul class="oskills list-none ml-2 p-0">
+                        <li class="mb-4">
+                            <div class="absolute mt-2.5 w-2 h-2 bg-blue-500"></div>
+                            <div class="ml-10 p-0 transition-all duration-500">
+                                <h3 class="text-lg  text-gray-900 dark:text-gray-500">Highly Proficient in <b>Written English</b> and Conversational in <b>Spoken English</b>.</h3>
+                            </div>
+                        </li>
+                        <li class="mb-4">
+                            <div class="absolute mt-2.5 w-2 h-2 bg-blue-500"></div>
+                            <div class="ml-8 p-0 transition-all duration-500">
+                                <h3 class="text-lg text-gray-900 dark:text-gray-500">Maintain an <b>open mind</b> to ideas and constructive criticism from colleagues, actively seeking to <b>contribute</b> to the team's success.</h3>
+                            </div>
+                        </li>
+                        <li class="mb-4">
+                            <div class="absolute mt-2.5 w-2 h-2 bg-blue-500"></div>
+                            <div class="ml-8 p-0 transition-all duration-500">
+                                <h3 class="text-lg text-gray-900 dark:text-gray-500">Leverage strong <b>analytical and critical thinking skills</b> to develop innovative solutions to <b>complex problems</b>.</h3>
+                            </div>
+                        </li>
+                        <li class="mb-4">
+                            <div class="absolute mt-2.5 w-2 h-2 bg-blue-500"></div>
+                            <div class="ml-8 p-0 transition-all duration-500">
+                                <h3 class="text-lg  text-gray-900 dark:text-gray-500">Proactive in acquiring <b>new skills</b> and keeping <b>up-to-date</b> with the latest advancements in the field</h3>
+                            </div>
+                        </li>
+                        <li class="mb-4">
+                            <div class="absolute mt-2.5 w-2 h-2 bg-blue-500"></div>
+                            <div class="p-0 ml-8 transition-all duration-500">
+                                <h3 class="text-lg  text-gray-900 dark:text-gray-500">Thrives in <b>dynamic environments</b>, seamlessly transitioning to changes in workflow, workspace (on-site, remote, or hybrid), and team dynamics, ensuring continued <b>productivity and efficiency</b>.</h3>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
                 <div class="contact-info text-center mt-8">
                     <a href="mailto:Ghosi.Emad@Gmail.com" class="text-blue-500 hover:underline">Email</a>
                     <a href="https://www.linkedin.com/in/emad-ghosi-a16a78254/" class="text-blue-500 hover:underline mx-4">LinkedIn</a>
@@ -200,25 +247,23 @@
                 </div>
             </div>
         </main>
-        </div>
-    
-    
-    <script>
-        
+    </div>
 
+    <script>
         function toggleTheme() {
-            if (document.getElementById("theme-btn").innerHTML=="Light Theme")
-            {
+            if (document.getElementById("theme-btn").innerHTML == "Light Theme") {
                 document.getElementById("theme-btn").innerHTML = "Dark Theme";
-            }
-            else
-            {
+            } else {
                 document.getElementById("theme-btn").innerHTML = "Light Theme";
             }
             document.body.classList.toggle('dark-mode');
-            
         }
-        
+        function toggleMaximize()
+        {
+            var img = document.getElementById("maximize-img");
+            img.classList.toggle("maximized");
+        }
+
 
     </script>
 </body>
