@@ -72,16 +72,6 @@
             }
         }
 
-        .maximize{
-           
-            transition: width 0.3s ease-in-out;
-        }
-
-
-        .maximize.maximized{
-            width: 500px;
-            height: 500px;
-        }
 
 
 
@@ -98,10 +88,9 @@
         top-0 z-10">
         <div class=" mx-auto px-4 py-4 flex justify-between items-center">
             <img src="https://avatars.githubusercontent.com/u/87330040?v=4" 
-            class="maximize w-14 h-14 rounded-full toggle-button 
-            hover:-translate-y-1 hover:scale-105 duration-300"
-            id="maximize-img" onclick="toggleMaximize()" 
-            alt="" >
+            class=" w-14 h-14 rounded-full toggle-button 
+            hover:-translate-y-1 hover:scale-110 duration-300"
+            alt="my picture" >
             <div class="text-2xl font-semibold ml-8  p-2 rounded-lg">
                 <a href="https://emadg-dev.github.io/" target="_blank"
                 >
@@ -155,8 +144,8 @@
                 <div class="section mb-8">
                     <h2 class="text-2xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">Education</h2>
                     <ul class="Education list-none p-0 transition-all duration-500">
-                        <li class="text-lg mb-2 text-gray-900 dark:text-gray-600">- Bachelor of Computer Engineering, Azad University, Science and Research Branch (1398 - 1403)</li>
-                        <li class="text-lg mb-2 text-gray-900 dark:text-gray-600">- C# Course Educate from Technical Institute of Tehran</li>
+                        <li class="text-lg mb-2 text-gray-900 dark:text-gray-600"><b>- Bachelor of Computer Engineering</b>, Azad University, Science and Research Branch (1398 - 1403)</li>
+                        <li class="text-lg mb-2 text-gray-900 dark:text-gray-600"><b>- C# Course Educate</b> from Technical Institute of Tehran</li>
                     </ul>
                 </div>
                 <div class="section mb-8">
@@ -197,6 +186,24 @@
                         <li class="inline-block rounded-full mr-2 mb-2">
                             <button class=" rounded-full bg-purple-500 text-white m-0 py-2 px-4 p-0">Bootstrap</button>
                         </li>
+                    </ul>
+                </div>
+                <div class="section mb-8">
+                    <h2 class="text-2xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">
+                        Available Projects
+                    </h2>
+                    <ul class="list-none p-0 ml-2 transition-all duration-500">
+                        <li class="inline-block rounded-full mb-2">
+                            <div class="absolute rounded-full mt-2  w-2 h-2 bg-blue-500"></div>
+                            <a href="https://github.com/emadg-dev/MyOnlineStore" 
+                            class="ml-2"
+                            target="_blank" alt="Online Nut Store"> 
+                                <span class=" rounded-full
+                                text-blue-600 underline
+                                m-0 py-2 px-4 p-0">Online E-Commerce Project</button>
+                            </a>
+                        </li>
+                        
                     </ul>
                 </div>
                 <div class="section mb-8">
@@ -254,12 +261,7 @@
             }
             document.body.classList.toggle('dark-mode');
         }
-        function toggleMaximize()
-        {
-            var img = document.getElementById("maximize-img");
-            img.classList.toggle("maximized");
-        }
-
+    
 
     </script>
 </body>
