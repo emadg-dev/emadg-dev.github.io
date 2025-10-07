@@ -174,6 +174,7 @@
       transform: translateY(-6px) scale(1.02);
       box-shadow: 0 14px 48px rgba(0, 0, 0, 0.18);
       background: rgba(255, 255, 255, 0.5);
+      transition: 0.8s;
     }
     
     .lang-badge-wrapper {
@@ -255,7 +256,7 @@
       transform: translateX(-50%);
       top: 80%;
       width: 70%;
-      height: 7px;
+      height: 8px;
       border-bottom-left-radius: 80px;
       border-bottom-right-radius: 80px;
       transition: 0.4s;
@@ -264,8 +265,8 @@
     }
     
     .lang-badge-wrapper:hover::after {
-      top: 50%;
-      height: 50%;
+      top: 40%;
+      height: 60%;
       width: 80%;
       border-radius: 30px;
       transition-delay: 0.1s;
@@ -273,43 +274,43 @@
     
     .lang-badge-wrapper:nth-child(1)::before,
     .lang-badge-wrapper:nth-child(1)::after {
-      background: #ff659e;
+      background: #ff659dd5;
       box-shadow: 0 0 5px #ff1f71, 0 0 15px #ff1f71, 0 0 30px #ff1f71, 0 0 60px #ff1f71;
     }
     
     .lang-badge-wrapper:nth-child(2)::before,
     .lang-badge-wrapper:nth-child(2)::after {
-      background: #ff659e;
+      background: #ff659dd5;
       box-shadow: 0 0 5px #ff1f71, 0 0 15px #ff1f71, 0 0 30px #ff1f71, 0 0 60px #ff1f71;
     }
     
     .lang-badge-wrapper:nth-child(3)::before,
     .lang-badge-wrapper:nth-child(3)::after {
-      background: #62c5ff;
+      background: #62c5ffd2;
       box-shadow: 0 0 5px #5fc4ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff, 0 0 60px #2db2ff;
     }
     
     .lang-badge-wrapper:nth-child(4)::before,
     .lang-badge-wrapper:nth-child(4)::after {
-      background: #62c5ff;
+      background: #62c5ffd2;
       box-shadow: 0 0 5px #2db2ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff, 0 0 60px #2db2ff;
     }
     
     .lang-badge-wrapper:nth-child(5)::before,
     .lang-badge-wrapper:nth-child(5)::after {
-      background: #ff865a;
+      background: #ff865ad2;
       box-shadow: 0 0 5px #ff6b35, 0 0 15px #ff6b35, 0 0 30px #ff6b35, 0 0 60px #ff6b35;
     }
     
     .lang-badge-wrapper:nth-child(6)::before,
     .lang-badge-wrapper:nth-child(6)::after {
-      background: #ba6ef8;
+      background: #ba6ef8d2;
       box-shadow: 0 0 5px #9d4edd, 0 0 15px #9d4edd, 0 0 30px #9d4edd, 0 0 60px #9d4edd;
     }
     
     .lang-badge-wrapper:nth-child(7)::before,
     .lang-badge-wrapper:nth-child(7)::after {
-      background: #ba6ef8;
+      background: #ba6ef8d2;
       box-shadow: 0 0 5px #9d4edd, 0 0 15px #9d4edd, 0 0 30px #9d4edd, 0 0 60px #9d4edd;
     }
     
@@ -362,9 +363,14 @@
   <main class="pt-24 px-4 max-w-5xl mx-auto pb-12 relative z-10">
     <!-- Header/Profile -->
     <section class="glass-section mb-12 p-8" data-aos="fade-up">
-      <img src="https://avatars.githubusercontent.com/u/87330040?v=4" alt="my picture" class="profile-img w-32 h-32 rounded-full mx-auto ring-4 ring-purple-400 transition-all duration-300 hover:scale-110 hover:ring-purple-500" />
-      <h1 class="text-4xl font-bold mt-4 text-gray-800">EMAD GHOSI</h1>
-      <p class="text-lg text-gray-600">.NET Core Developer</p>
+      <div class="flex items-center justify-between gap-8 flex-wrap">
+        <div class="flex-1 min-w-[250px]">
+          <h1 class="text-4xl font-bold text-gray-800">EMAD GHOSI</h1>
+          <p class="text-lg text-gray-600 mt-2">.NET Core Developer</p>
+        </div>
+        <img src="https://avatars.githubusercontent.com/u/87330040?v=4" alt="my picture" 
+        class="profile-img size-52 rounded-full ring-4 ring-purple-400 transition-all duration-300 hover:scale-110 hover:ring-purple-500" />
+      </div>
     </section>
 
     <section class="glass-section mb-12 p-8" data-aos="fade-right">
