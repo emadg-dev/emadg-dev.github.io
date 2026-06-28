@@ -1,0 +1,323 @@
+/* ── Base ─────────────────────────────────────────── */
+body {
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(
+        135deg,
+        #fce4ec 0%,
+        #e1f5fe 25%,
+        #f3e5f5 50%,
+        #fff9c4 75%,
+        #e8f5e9 100%
+    );
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ── Floating background shapes ──────────────────── */
+.shape {
+    position: fixed;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    z-index: 0;
+}
+
+.shape-circle {
+    border-radius: 50%;
+    background: rgba(255, 182, 193, 0.15);
+    box-shadow: 20px 20px 40px rgba(255, 105, 180, 0.2);
+}
+
+.shape-square {
+    border-radius: 20px;
+    background: rgba(173, 216, 230, 0.15);
+    box-shadow: 25px 25px 45px rgba(135, 206, 250, 0.2);
+    transform: rotate(45deg);
+}
+
+.shape-rect {
+    border-radius: 15px;
+    background: rgba(255, 253, 208, 0.15);
+    box-shadow: 15px 15px 35px rgba(255, 248, 180, 0.2);
+}
+
+.shape1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 15%;
+    animation: float1 20s ease-in-out infinite;
+}
+.shape2 {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    left: 8%;
+    animation: float2 18s ease-in-out infinite;
+}
+.shape3 {
+    width: 180px;
+    height: 180px;
+    top: 20%;
+    right: 10%;
+    animation: float3 22s ease-in-out infinite;
+}
+.shape4 {
+    width: 120px;
+    height: 250px;
+    top: 70%;
+    right: 15%;
+    animation: float4 19s ease-in-out infinite;
+}
+.shape5 {
+    width: 160px;
+    height: 160px;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    animation: float5 21s ease-in-out infinite;
+}
+.shape6 {
+    width: 100px;
+    height: 200px;
+    top: 15%;
+    left: 45%;
+    animation: float6 17s ease-in-out infinite;
+}
+.shape7 {
+    width: 140px;
+    height: 140px;
+    bottom: 10%;
+    left: 35%;
+    animation: float7 23s ease-in-out infinite;
+}
+
+@keyframes float1 {
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate(30px, -40px) rotate(10deg);
+    }
+}
+@keyframes float2 {
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate(-25px, 35px) rotate(-8deg);
+    }
+}
+@keyframes float3 {
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate(-35px, 30px) rotate(12deg);
+    }
+}
+@keyframes float4 {
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate(20px, -30px) rotate(-10deg);
+    }
+}
+@keyframes float5 {
+    0%,
+    100% {
+        transform: translateX(-50%) rotate(45deg) translate(0, 0);
+    }
+    50% {
+        transform: translateX(-50%) rotate(55deg) translate(25px, 25px);
+    }
+}
+@keyframes float6 {
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate(-20px, 40px) rotate(15deg);
+    }
+}
+@keyframes float7 {
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate(30px, -25px) rotate(-12deg);
+    }
+}
+
+/* ── Glass utilities ──────────────────────────────── */
+.glass-section {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.glass-section:hover {
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.2);
+}
+
+.glass-navbar {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.3s ease;
+    cursor: pointer;
+}
+
+.glass-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 14px 48px rgba(0, 0, 0, 0.18);
+    background: rgba(255, 255, 255, 0.5);
+    transition: 0.8s;
+}
+
+/* ── Navbar links ─────────────────────────────────── */
+.nav-link {
+    position: relative;
+    font-weight: 500;
+    color: #6b7280;
+    padding: 0.25rem 0.1rem;
+    transition: color 0.2s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #9333ea;
+    border-radius: 2px;
+    transition: width 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #7c3aed;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ── Skill badges (icon + label) ─────────────────── */
+.skill-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.9rem 1.1rem;
+    min-width: 80px;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    cursor: default;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.skill-badge:hover {
+    transform: translateY(-5px) scale(1.07);
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
+.skill-badge i {
+    font-size: 2.25rem;
+    line-height: 1;
+}
+
+.skill-badge span {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #4b5563;
+    white-space: nowrap;
+}
+
+/* ── Misc components ──────────────────────────────── */
+.timeline-dot {
+    background: linear-gradient(135deg, #9c27b0, #e91e63);
+    box-shadow: 0 0 0 4px rgba(156, 39, 176, 0.2);
+}
+
+.profile-img {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(156, 39, 176, 0.3);
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    background: rgba(255, 255, 255, 0.45);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Tag pills ────────────────────────────────────── */
+.tag {
+    display: inline-block;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: rgba(147, 51, 234, 0.12);
+    color: #7c3aed;
+    border: 1px solid rgba(147, 51, 234, 0.25);
+}
+
+/* ── Mobile nav toggle ────────────────────────────── */
+#nav-menu {
+    transition:
+        max-height 0.3s ease,
+        opacity 0.3s ease;
+}
+
+/* ── Tab bar ──────────────────────────────────── */

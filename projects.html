@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Projects – EMAD's CV</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Inter:wght@600;700&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body class="text-gray-700">
+        <!-- Floating background shapes -->
+        <div class="shape shape-circle shape1"></div>
+        <div class="shape shape-square shape2"></div>
+        <div class="shape shape-circle shape3"></div>
+        <div class="shape shape-rect shape4"></div>
+        <div class="shape shape-square shape5"></div>
+        <div class="shape shape-rect shape6"></div>
+        <div class="shape shape-circle shape7"></div>
+
+        <!-- Navbar -->
+        <nav
+            class="glass-navbar fixed w-full top-0 z-20 transition-all duration-300"
+        >
+            <div
+                class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between"
+            >
+                <!-- Brand -->
+                <a
+                    href="index.html"
+                    class="text-lg font-semibold text-purple-600 hover:text-purple-700 transition-colors"
+                >
+                    EMAD'S CV
+                </a>
+
+                <div class="hidden sm:flex items-center gap-6">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="experience.html" class="nav-link">Experience</a>
+                    <a href="education.html" class="nav-link">Education</a>
+                    <a href="skills.html" class="nav-link">Skills</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </div>
+
+                <!-- Mobile hamburger -->
+                <button
+                    id="nav-toggle"
+                    aria-expanded="false"
+                    aria-label="Toggle menu"
+                    class="sm:hidden flex flex-col gap-1.5 p-1 rounded focus:outline-none"
+                >
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                </button>
+            </div>
+
+            <div
+                id="nav-menu"
+                class="sm:hidden hidden px-4 pb-3 flex flex-col gap-3"
+            >
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="experience.html" class="nav-link">Experience</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+            </div>
+        </nav>
+
+        <!-- Main content -->
+        <main class="pt-24 px-4 max-w-5xl mx-auto pb-12 relative z-10">
+            <!-- Page header -->
+            <section class="glass-section mb-12 p-8" data-aos="fade-up">
+                <h1 class="text-4xl font-bold text-gray-800">Projects</h1>
+                <p class="text-gray-600 mt-2 text-lg">
+                    A selection of things I've built or contributed to.
+                </p>
+            </section>
+
+            <!-- Project grid -->
+            <div
+                class="grid gap-6 sm:grid-cols-2"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+                <!-- Card 1 -->
+                <a
+                    href="https://github.com/emadg-dev/MyOnlineStore"
+                    target="_blank"
+                    class="project-card rounded-2xl p-6 flex flex-col gap-4 no-underline"
+                >
+                    <div class="flex items-start justify-between gap-2">
+                        <h2 class="text-xl font-bold text-purple-700">
+                            Online E-Commerce Store
+                        </h2>
+                        <!-- GitHub icon -->
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-5 h-5 shrink-0 text-gray-400 mt-1"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                        >
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"
+                            />
+                        </svg>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed flex-1">
+                        A full-featured e-commerce web application built with
+                        Django on the backend. Implements product listings, a
+                        shopping cart, order management, and user authentication
+                        using Django's class-based views (CBVs).
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag">Python</span>
+                        <span class="tag">Django</span>
+                        <span class="tag">CBV</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a
+                    href="https://github.com/emadg-dev/RoshanAPI"
+                    target="_blank"
+                    class="project-card rounded-2xl p-6 flex flex-col gap-4 no-underline"
+                >
+                    <div class="flex items-start justify-between gap-2">
+                        <h2 class="text-xl font-bold text-purple-700">
+                            Roshan – REST API
+                        </h2>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-5 h-5 shrink-0 text-gray-400 mt-1"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                        >
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"
+                            />
+                        </svg>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed flex-1">
+                        A backend REST API for an online store, built with
+                        Django REST Framework. Provides endpoints for products,
+                        categories, orders, and user management with token-based
+                        authentication.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag">Python</span>
+                        <span class="tag">Django REST Framework</span>
+                        <span class="tag">JWT</span>
+                    </div>
+                </a>
+
+                <!-- Card 3 (sample) -->
+                <a
+                    href="#"
+                    class="project-card rounded-2xl p-6 flex flex-col gap-4 no-underline"
+                >
+                    <div class="flex items-start justify-between gap-2">
+                        <h2 class="text-xl font-bold text-purple-700">
+                            Eren – Desktop ERP
+                        </h2>
+                        <span class="text-xs text-gray-400 mt-1 font-medium"
+                            >Private</span
+                        >
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed flex-1">
+                        A comprehensive management and accounting desktop
+                        application built on .NET Framework with MVVM
+                        architecture and SQL Server. Integrated Dapper for
+                        high-performance database interactions and served as the
+                        primary daily-use tool for end-clients at Sarvfaraz.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag">C#</span>
+                        <span class="tag">.NET Framework</span>
+                        <span class="tag">MVVM</span>
+                        <span class="tag">SQL Server</span>
+                        <span class="tag">Dapper</span>
+                    </div>
+                </a>
+
+                <!-- Card 4 (sample) -->
+                <a
+                    href="#"
+                    class="project-card rounded-2xl p-6 flex flex-col gap-4 no-underline"
+                >
+                    <div class="flex items-start justify-between gap-2">
+                        <h2 class="text-xl font-bold text-purple-700">
+                            CRM System
+                        </h2>
+                        <span class="text-xs text-gray-400 mt-1 font-medium"
+                            >Private</span
+                        >
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed flex-1">
+                        Internal CRM web application built with Django for
+                        Sarvfaraz. Features dynamic views with CBVs,
+                        dual-database support (SQL Server &amp; PostgreSQL), and
+                        VoIP AMI integration for real-time communication and
+                        workflow automation.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag">Python</span>
+                        <span class="tag">Django</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">VoIP</span>
+                    </div>
+                </a>
+            </div>
+        </main>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

@@ -1,519 +1,229 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EMAD's CV</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Inter:wght@600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #fce4ec 0%, #e1f5fe 25%, #f3e5f5 50%, #fff9c4 75%, #e8f5e9 100%);
-      min-height: 100vh;
-      position: relative;
-      overflow-x: hidden;
-    }
-    
-    .shape {
-      position: fixed;
-      backdrop-filter: blur(2px);
-      -webkit-backdrop-filter: blur(2px);
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      z-index: 0;
-    }
-    
-   .shape-circle {
-      border-radius: 50%;
-      background: rgba(255, 182, 193, 0.15);
-      box-shadow: 20px 20px 40px rgba(255, 105, 180, 0.2);
-    }
-    
-    .shape-square {
-      border-radius: 20px;
-      background: rgba(173, 216, 230, 0.15);
-      box-shadow: 25px 25px 45px rgba(135, 206, 250, 0.2);
-      transform: rotate(45deg);
-    }
-    
-    .shape-rect {
-      border-radius: 15px;
-      background: rgba(255, 253, 208, 0.15);
-      box-shadow: 15px 15px 35px rgba(255, 248, 180, 0.2);
-    }
-    
-    .shape1 {
-      width: 200px;
-      height: 200px;
-      top: 10%;
-      left: 15%;
-      animation: float1 20s ease-in-out infinite;
-    }
-    
-    .shape2 {
-      width: 150px;
-      height: 150px;
-      top: 60%;
-      left: 8%;
-      animation: float2 18s ease-in-out infinite;
-    }
-    
-    .shape3 {
-      width: 180px;
-      height: 180px;
-      top: 20%;
-      right: 10%;
-      animation: float3 22s ease-in-out infinite;
-    }
-    
-    .shape4 {
-      width: 120px;
-      height: 250px;
-      top: 70%;
-      right: 15%;
-      animation: float4 19s ease-in-out infinite;
-    }
-    
-    .shape5 {
-      width: 160px;
-      height: 160px;
-      top: 45%;
-      left: 50%;
-      transform: translateX(-50%) rotate(45deg);
-      animation: float5 21s ease-in-out infinite;
-    }
-    
-    .shape6 {
-      width: 100px;
-      height: 200px;
-      top: 15%;
-      left: 45%;
-      animation: float6 17s ease-in-out infinite;
-    }
-    
-    .shape7 {
-      width: 140px;
-      height: 140px;
-      bottom: 10%;
-      left: 35%;
-      animation: float7 23s ease-in-out infinite;
-    }
-    
-    @keyframes float1 {
-      0%, 100% { transform: translate(0, 0) rotate(0deg); }
-      50% { transform: translate(30px, -40px) rotate(10deg); }
-    }
-    
-    @keyframes float2 {
-      0%, 100% { transform: translate(0, 0) rotate(0deg); }
-      50% { transform: translate(-25px, 35px) rotate(-8deg); }
-    }
-    
-    @keyframes float3 {
-      0%, 100% { transform: translate(0, 0) rotate(0deg); }
-      50% { transform: translate(-35px, 30px) rotate(12deg); }
-    }
-    
-    @keyframes float4 {
-      0%, 100% { transform: translate(0, 0) rotate(0deg); }
-      50% { transform: translate(20px, -30px) rotate(-10deg); }
-    }
-    
-    @keyframes float5 {
-      0%, 100% { transform: translateX(-50%) rotate(45deg) translate(0, 0); }
-      50% { transform: translateX(-50%) rotate(55deg) translate(25px, 25px); }
-    }
-    
-    @keyframes float6 {
-      0%, 100% { transform: translate(0, 0) rotate(0deg); }
-      50% { transform: translate(-20px, 40px) rotate(15deg); }
-    }
-    
-    @keyframes float7 {
-      0%, 100% { transform: translate(0, 0) rotate(0deg); }
-      50% { transform: translate(30px, -25px) rotate(-12deg); }
-    }
-    
-    .glass-section {
-      background: rgba(255, 255, 255, 0.25);
-      backdrop-filter: blur(20px) saturate(180%);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
-      border-radius: 1.5rem;
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .glass-section:hover {
-      background: rgba(255, 255, 255, 0.35);
-      box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.2);
-    }
-    
-    .glass-navbar {
-      background: rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(15px) saturate(180%);
-      -webkit-backdrop-filter: blur(15px) saturate(180%);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
-    
-    .glass-card {
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(15px) saturate(180%);
-      -webkit-backdrop-filter: blur(15px) saturate(180%);
-      border-radius: 1.5rem;
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-      transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.3s ease;
-      cursor: pointer;
-    }
-    
-    .glass-card:hover {
-      transform: translateY(-6px) scale(1.02);
-      box-shadow: 0 14px 48px rgba(0, 0, 0, 0.18);
-      background: rgba(255, 255, 255, 0.5);
-      transition: 0.8s;
-    }
-    
-    .lang-badge-wrapper {
-      position: relative;
-      display: inline-block;
-      margin: 0.5rem;
-    }
-    
-    .lang-badge {
-      position: relative;
-      border-radius: 35px;
-      padding: 0.75rem 1.5rem;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      letter-spacing: 1px;
-      text-decoration: none;
-      overflow: hidden;
-      font-weight: 500;
-      z-index: 1;
-      transition: 0.5s;
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      cursor: pointer;
-    }
-    
-    .lang-badge:hover {
-      letter-spacing: 3px;
-    }
-    
-    .lang-badge::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
-      transform: skewX(45deg) translate(0);
-      transition: 0.4s;
-      filter: blur(0px);
-    }
-/*     
-    .lang-badge:hover::before {
-      transform: skewX(45deg) translate(200px);
-    } */
-/*     
-    .lang-badge-wrapper::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: -5px;
-      width: 30px;
-      height: 10px;
-      border-radius: 10px;
-      transition: 0.4s;
-      transition-delay: 0s;
-      z-index: 0;
-    } */
-    
-    /* .lang-badge-wrapper:hover::before {
-      bottom: 0;
-      height: 50%;
-      width: 80%;
-      border-radius: 30px;
-      transition-delay: 0.1s;
-    } */
-    
-    .lang-badge-wrapper::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 80%;
-      width: 70%;
-      height: 8px;
-      border-bottom-left-radius: 80px;
-      border-bottom-right-radius: 80px;
-      transition: 0.4s;
-      transition-delay: 0s;
-      z-index: 0;
-    }
-    
-    .lang-badge-wrapper:hover::after {
-      top: 40%;
-      height: 60%;
-      width: 80%;
-      border-radius: 30px;
-      transition-delay: 0.1s;
-    }
-    
-    .lang-badge-wrapper:nth-child(1)::before,
-    .lang-badge-wrapper:nth-child(1)::after {
-      background: #ff659dd5;
-      box-shadow: 0 0 5px #ff1f71, 0 0 15px #ff1f71, 0 0 30px #ff1f71, 0 0 60px #ff1f71;
-    }
-    
-    .lang-badge-wrapper:nth-child(2)::before,
-    .lang-badge-wrapper:nth-child(2)::after {
-      background: #ff659dd5;
-      box-shadow: 0 0 5px #ff1f71, 0 0 15px #ff1f71, 0 0 30px #ff1f71, 0 0 60px #ff1f71;
-    }
-    
-    .lang-badge-wrapper:nth-child(3)::before,
-    .lang-badge-wrapper:nth-child(3)::after {
-      background: #62c5ffd2;
-      box-shadow: 0 0 5px #5fc4ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff, 0 0 60px #2db2ff;
-    }
-    
-    .lang-badge-wrapper:nth-child(4)::before,
-    .lang-badge-wrapper:nth-child(4)::after {
-      background: #62c5ffd2;
-      box-shadow: 0 0 5px #2db2ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff, 0 0 60px #2db2ff;
-    }
-    
-    .lang-badge-wrapper:nth-child(5)::before,
-    .lang-badge-wrapper:nth-child(5)::after {
-      background: #ff865ad2;
-      box-shadow: 0 0 5px #ff6b35, 0 0 15px #ff6b35, 0 0 30px #ff6b35, 0 0 60px #ff6b35;
-    }
-    
-    .lang-badge-wrapper:nth-child(6)::before,
-    .lang-badge-wrapper:nth-child(6)::after {
-      background: #ba6ef8d2;
-      box-shadow: 0 0 5px #9d4edd, 0 0 15px #9d4edd, 0 0 30px #9d4edd, 0 0 60px #9d4edd;
-    }
-    
-    .lang-badge-wrapper:nth-child(7)::before,
-    .lang-badge-wrapper:nth-child(7)::after {
-      background: #ba6ef8d2;
-      box-shadow: 0 0 5px #9d4edd, 0 0 15px #9d4edd, 0 0 30px #9d4edd, 0 0 60px #9d4edd;
-    }
-    
-    .timeline-dot {
-      background: linear-gradient(135deg, #9c27b0, #e91e63);
-      box-shadow: 0 0 0 4px rgba(156, 39, 176, 0.2);
-    }
-    
-    .profile-img {
-      backdrop-filter: blur(10px);
-      box-shadow: 0 8px 32px rgba(156, 39, 176, 0.3);
-    }
-    
-    .project-card {
-      background: rgba(255, 255, 255, 0.35);
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      transition: all 0.3s ease;
-    }
-    
-    .project-card:hover {
-      background: rgba(255, 255, 255, 0.45);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-    }
-  </style>
-</head>
-<body class="text-gray-700">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EMAD's CV</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Inter:wght@600;700&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body class="text-gray-700">
+        <div class="shape shape-circle shape1"></div>
+        <div class="shape shape-square shape2"></div>
+        <div class="shape shape-circle shape3"></div>
+        <div class="shape shape-rect shape4"></div>
+        <div class="shape shape-square shape5"></div>
+        <div class="shape shape-rect shape6"></div>
+        <div class="shape shape-circle shape7"></div>
 
-  <!-- 3D Floating Shapes -->
-  <div class="shape shape-circle shape1 "></div>
-  <div class="shape shape-square shape2"></div>
-  <div class="shape shape-circle shape3"></div>
-  <div class="shape shape-rect shape4"></div>
-  <div class="shape shape-square shape5"></div>
-  <div class="shape shape-rect shape6"></div>
-  <div class="shape shape-circle shape7"></div>
+        <!-- Navbar -->
+        <nav
+            class="glass-navbar fixed w-full top-0 z-20 transition-all duration-300"
+        >
+            <div
+                class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between"
+            >
+                <a
+                    href="index.html"
+                    class="text-lg font-semibold text-purple-600 hover:text-purple-700 transition-colors"
+                    >EMAD'S CV</a
+                >
+                <div class="hidden sm:flex items-center gap-6">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="experience.html" class="nav-link">Experience</a>
+                    <a href="education.html" class="nav-link">Education</a>
+                    <a href="skills.html" class="nav-link">Skills</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </div>
+                <button
+                    id="nav-toggle"
+                    aria-expanded="false"
+                    aria-label="Toggle menu"
+                    class="sm:hidden flex flex-col gap-1.5 p-1 rounded focus:outline-none"
+                >
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                </button>
+            </div>
+            <div
+                id="nav-menu"
+                class="sm:hidden hidden px-4 pb-3 flex flex-col gap-3"
+            >
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="experience.html" class="nav-link">Experience</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+            </div>
+        </nav>
 
-  <!-- Navbar -->
-  <nav class="glass-navbar fixed w-full top-0 z-20 transition-all duration-300 z-index-1000">
-    <div class="max-w-5xl mx-auto py-4 flex justify-between items-center px-4">
-      <a href="https://emadg-dev.github.io/" target="_blank">
-        <h2 class="text-lg font-semibold text-purple-600 hover:text-purple-700 transition-colors">EMAD'S CV</h2>
-      </a>
-    </div>
-  </nav>
+        <!-- Main content -->
+        <main class="pt-24 px-4 max-w-5xl mx-auto pb-12 relative z-10">
+            <!-- Profile -->
+            <section class="glass-section mb-8 p-8" data-aos="fade-up">
+                <div class="flex items-center justify-between gap-8 flex-wrap">
+                    <div class="flex-1 min-w-[250px]">
+                        <h1 class="text-4xl font-bold text-gray-800">
+                            EMAD GHOSI
+                        </h1>
+                        <p class="text-lg text-gray-600 mt-2">
+                            .NET Core Developer
+                        </p>
+                    </div>
+                    <img
+                        src="https://avatars.githubusercontent.com/u/87330040?v=4"
+                        alt="Emad Ghosi"
+                        class="profile-img size-52 rounded-full ring-4 ring-purple-400 transition-all duration-300 hover:scale-110 hover:ring-purple-500"
+                    />
+                </div>
+            </section>
 
-  <!-- Main Container -->
-  <main class="pt-24 px-4 max-w-5xl mx-auto pb-12 relative z-10">
-    <!-- Header/Profile -->
-    <section class="glass-section mb-12 p-8" data-aos="fade-up">
-      <div class="flex items-center justify-between gap-8 flex-wrap">
-        <div class="flex-1 min-w-[250px]">
-          <h1 class="text-4xl font-bold text-gray-800">EMAD GHOSI</h1>
-          <p class="text-lg text-gray-600 mt-2">.NET Core Developer</p>
-        </div>
-        <img src="https://avatars.githubusercontent.com/u/87330040?v=4" alt="my picture" 
-        class="profile-img size-52 rounded-full ring-4 ring-purple-400 transition-all duration-300 hover:scale-110 hover:ring-purple-500" />
-      </div>
-    </section>
+            <!-- About -->
+            <section class="glass-section mb-8 p-8" data-aos="fade-right">
+                <h2
+                    class="text-2xl font-semibold border-b-2 border-purple-400 pb-2 mb-4 text-gray-800"
+                >
+                    About Me
+                </h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Enthusiastic software developer with <b>4+ years</b> of
+                    experience in Back-end development. Skilled in
+                    <b>various programming languages</b> and technologies, I'm a
+                    resourceful <b>problem-solver</b> who thrives in any
+                    environment. I bring a strong <b>work ethic</b> and passion
+                    for <b>innovation</b> to tackle new challenges and utilize
+                    available tools to find <b>optimal solutions</b>.
+                </p>
+            </section>
 
-    <section class="glass-section mb-12 p-8" data-aos="fade-right">
-      <h2 class="text-2xl font-semibold border-b-2 border-purple-400 pb-2 mb-4 text-gray-800">About Me</h2>
-      <p class="text-gray-600 text-lg leading-relaxed">
-        Enthusiastic software developer with <b>4+ years</b> of experience in Back-end development. Skilled in <b>various programming languages</b> and technologies, 
-        I'm a resourceful <b>problem-solver</b> who thrives in any environment. I bring a strong <b>work ethic</b> and passion for 
-        <b>innovation</b> to tackle new challenges and utilize available tools to find <b>optimal solutions</b>.
-      </p>
-    </section>
+            <!-- Quick-nav cards -->
+            <div
+                class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8"
+                data-aos="fade-up"
+            >
+                <a
+                    href="experience.html"
+                    class="glass-card p-6 flex flex-col items-center gap-2 text-center no-underline"
+                >
+                    <svg
+                        class="w-7 h-7 text-purple-500"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zM16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"
+                        />
+                    </svg>
+                    <span class="font-semibold text-gray-700">Experience</span>
+                </a>
+                <a
+                    href="education.html"
+                    class="glass-card p-6 flex flex-col items-center gap-2 text-center no-underline"
+                >
+                    <svg
+                        class="w-7 h-7 text-purple-500"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 14l9-5-9-5-9 5 9 5zm0 0v6m-4-3.5l4 2 4-2"
+                        />
+                    </svg>
+                    <span class="font-semibold text-gray-700">Education</span>
+                </a>
+                <a
+                    href="skills.html"
+                    class="glass-card p-6 flex flex-col items-center gap-2 text-center no-underline"
+                >
+                    <svg
+                        class="w-7 h-7 text-purple-500"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                    </svg>
+                    <span class="font-semibold text-gray-700">Skills</span>
+                </a>
+                <a
+                    href="projects.html"
+                    class="glass-card p-6 flex flex-col items-center gap-2 text-center no-underline"
+                >
+                    <svg
+                        class="w-7 h-7 text-purple-500"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                        />
+                    </svg>
+                    <span class="font-semibold text-gray-700">Projects</span>
+                </a>
+            </div>
 
-    <section class="glass-section mb-12 p-8" data-aos="fade-left">
-      <h2 class="text-2xl font-semibold border-b-2 border-purple-400 pb-2 mb-4 text-gray-800">Experience</h2>
-      <ol class="relative border-l border-purple-300 ml-4">
+            <!-- Contact -->
+            <section class="glass-section text-center p-8" data-aos="zoom-in">
+                <h2
+                    class="text-2xl font-semibold border-b-2 border-purple-400 pb-2 mb-4 text-gray-800"
+                >
+                    Contact
+                </h2>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a
+                        href="mailto:Ghosi.Emad@Gmail.com"
+                        class="text-purple-600 hover:text-purple-700 font-medium transition-colors"
+                        >Email</a
+                    >
+                    <a
+                        href="tel:09214113572"
+                        class="text-purple-600 hover:text-purple-700 font-medium transition-colors"
+                        >Phone</a
+                    >
+                    <a
+                        href="https://www.linkedin.com/in/emad-ghosi-a16a78254/"
+                        target="_blank"
+                        class="text-purple-600 hover:text-purple-700 font-medium transition-colors"
+                        >LinkedIn</a
+                    >
+                    <a
+                        href="https://github.com/Emadg-dev"
+                        target="_blank"
+                        class="text-purple-600 hover:text-purple-700 font-medium transition-colors"
+                        >GitHub</a
+                    >
+                </div>
+            </section>
+        </main>
 
-        <li class="mb-10 ml-6">
-          <span class="timeline-dot absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 "></span>
-          <time class="mb-1 text-sm font-normal leading-none text-gray-500">May 2025 (Ordibehesht 1404) - Present</time>
-          <h3 class="text-lg font-semibold text-gray-800">.NET Core Developer at <a class="underline text-purple-600 hover:text-purple-700" href="https://processingworld.com/">Processing World</a></h3>
-          <p class="text-base font-normal text-gray-600 leading-relaxed">
-            Contributing to the backend development of internal enterprise tools, including Human Resources Management and Time & Attendance systems,
-            using ASP.NET Core, Entity Framework Core, and the ASP.NET Zero framework within a microservices architecture. 
-            Collaborating with a 7-member team through Azure DevOps for source control and task coordination. 
-            Actively learning Angular by implementing frontend features alongside backend development.
-          </p>
-        </li>
-
-        <li class="mb-10 ml-6">
-
-            <span class="timeline-dot absolute flex items-center justify-center w-6 h-6 rounded-full -left-3"></span>
-            <time class="mb-1 text-sm font-normal leading-none text-gray-500">Jul 2024 (Mordad 1403) - Dec 2024 (Azar 1403)</time>
-            <h3 class="text-lg font-semibold text-gray-800">Django Developer at 
-              <a class="underline text-purple-600 hover:text-purple-700" target="_blank" href="https://sarvfaraz.com/">Sarvfaraz</a></h3>
-              <p class="text-base font-normal text-gray-600 leading-relaxed">
-                Developed a comprehensive CRM web application tailored for internal company use,
-                leveraging the Django framework across the entire stack. This involved designing and
-                implementing robust data models compatible with both SQL Server and PostgreSQL, building
-                dynamic user interfaces utilizing Django's class-based views (CBVs) and custom templates for
-                enhanced flexibility and design, and integrating external services through VoIP AMIs to enhance
-                communication and workflow management within the CRM system.
-              </p>
-          </li>
-
-        <li class="mb-10 ml-6" >
-          <span class="timeline-dot absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 "></span>
-          <time class="mb-1 text-sm font-normal leading-none text-gray-500">Jan 2022 (Bahman 1400) - Jul 2024 (Mordad 1403)</time>
-          <h3 class="text-lg font-semibold text-gray-800">.NET Developer at 
-            <a class="underline text-purple-600 hover:text-purple-700" target="_blank" href="https://sarvfaraz.com/">Sarvfaraz</a></h3>
-          <p class="text-base font-normal text-gray-600 leading-relaxed">
-            Led the design and development of a comprehensive management and accounting
-            application called Eren, built on .NET framework with an MVVM architecture and SQL Server
-            database backend. This involved creating a robust and user-friendly desktop solution to handle
-            daily data entry and management for end-clients. To enhance data access and efficiency, I
-            integrated libraries such as Dapper for streamlined database interactions and other relevant
-            .NET libraries to implement key functionalities.
-          </p>
-        </li>
-        
-      </ol>
-    </section>
-
-    <section class="glass-section mb-12 p-8" data-aos="fade-left">
-      <h2 class="text-2xl font-semibold border-b-2 border-purple-400 pb-2 mb-4 text-gray-800">Education</h2>
-      <ul class="space-y-6">
-        <li>
-          <h3 class="text-lg font-semibold text-gray-800">
-            M.Sc. in Information Technology - Multimedia Systems
-          </h3>
-          <p class="text-gray-600">
-            Tehran University — Starting Oct 2025 (Mehr 1404)
-          </p>
-          <p class="text-gray-600">
-            Currently pursuing a master's degree focusing on multimedia systems and IT technologies.
-          </p>
-        </li>
-        <li>
-          <h3 class="text-lg font-semibold text-gray-800">
-            B.Sc. in Computer Engineering
-          </h3>
-          <p class="text-gray-600">
-            Islamic Azad University, Science & Research Branch — Oct 2019 (Mehr 1398) - Sep 2024 (Shahrivar 1403)
-          </p>
-          <p class="text-gray-600">
-            Completed undergraduate studies in computer engineering with a strong foundation in software development and Database.
-          </p>
-        </li>
-      </ul>
-    </section>
-
-    <section class="glass-section mb-12 p-8" data-aos="fade-up">
-      <h2 class="text-2xl font-semibold border-b-2 border-purple-400 pb-2 mb-4 text-gray-800">Languages & Tools</h2>
-      <div class="flex flex-wrap justify-center gap-2">
-        <div class="lang-badge-wrapper">
-          <span class="lang-badge text-white">C#</span>
-        </div>
-        <div class="lang-badge-wrapper">
-          <span class="lang-badge text-white">Python</span>
-        </div>
-        <div class="lang-badge-wrapper">
-          <span class="lang-badge text-white">.NET Core</span>
-        </div>
-        <div class="lang-badge-wrapper">
-          <span class="lang-badge text-white">Django</span>
-        </div>
-        <div class="lang-badge-wrapper">
-          <span class="lang-badge text-white">Angular</span>
-        </div>
-        <div class="lang-badge-wrapper">
-          <span class="lang-badge text-white">Azure</span>
-        </div>
-        <div class="lang-badge-wrapper">
-          <span class="lang-badge text-white">Docker</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="glass-section mb-12 p-8" data-aos="fade-right">
-      <h2 class="text-2xl font-semibold border-b-2 border-purple-400 pb-2 mb-4 text-gray-800">Projects</h2>
-      <div class="space-y-4">
-        <a href="https://github.com/emadg-dev/MyOnlineStore" target="_blank" class="block p-5 project-card rounded-xl">
-          <h3 class="text-lg font-bold text-purple-600">Online E-Commerce Project</h3>
-          <p class="text-gray-600">E-commerce web app with Django backend and CBV </p>
-        </a>
-        <a href="https://github.com/emadg-dev/RoshanAPI" target="_blank" class="block p-5 project-card rounded-xl">
-          <h3 class="text-lg font-bold text-purple-600">API for Online Store</h3>
-          <p class="text-gray-600">Backend API built using Django</p>
-        </a>
-      </div>
-    </section>
-
-    <section class="glass-section text-center p-8" data-aos="zoom-in">
-      <h2 class="text-2xl font-semibold border-b-2 border-purple-400 pb-2 mb-4 text-gray-800">Contact</h2>
-      <div class="space-x-4 flex flex-wrap justify-center gap-4">
-        <a href="mailto:Ghosi.Emad@Gmail.com" class="text-purple-600 hover:text-purple-700 font-medium transition-colors">Email</a>
-        <a href="tel:09214113572" class="text-purple-600 hover:text-purple-700 font-medium transition-colors">Phone</a>
-        <a href="https://www.linkedin.com/in/emad-ghosi-a16a78254/" class="text-purple-600 hover:text-purple-700 font-medium transition-colors">LinkedIn</a>
-        <a href="https://github.com/Emadg-dev" class="text-purple-600 hover:text-purple-700 font-medium transition-colors">GitHub</a>
-      </div>
-    </section>
-  </main>
-
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>AOS.init({duration: 800, once: true});</script>
-
-</body>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="main.js"></script>
+    </body>
 </html>
