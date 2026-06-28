@@ -1,108 +1,236 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Experience – EMAD's CV</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Inter:wght@600;700&display=swap" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="text-gray-700">
-    <div class="shape shape-circle shape1"></div>
-    <div class="shape shape-square shape2"></div>
-    <div class="shape shape-circle shape3"></div>
-    <div class="shape shape-rect  shape4"></div>
-    <div class="shape shape-square shape5"></div>
-    <div class="shape shape-rect  shape6"></div>
-    <div class="shape shape-circle shape7"></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="64x64"
+            href="favicon-64x64.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="favicon-16x16.png"
+        />
+        <title>Experience – EMAD's CV</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Inter:wght@600;700&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body class="text-gray-700">
+        <div class="shape shape-circle shape1"></div>
+        <div class="shape shape-square shape2"></div>
+        <div class="shape shape-circle shape3"></div>
+        <div class="shape shape-rect shape4"></div>
+        <div class="shape shape-square shape5"></div>
+        <div class="shape shape-rect shape6"></div>
+        <div class="shape shape-circle shape7"></div>
 
-    <nav class="glass-navbar fixed w-full top-0 z-20 transition-all duration-300">
-      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-        <a href="index.html" class="text-lg font-semibold text-purple-600 hover:text-purple-700 transition-colors">EMAD'S CV</a>
-        <div class="hidden sm:flex items-center gap-6">
-          <a href="index.html"      class="nav-link">Home</a>
-          <a href="experience.html" class="nav-link active">Experience</a>
-          <a href="education.html"  class="nav-link">Education</a>
-          <a href="skills.html"     class="nav-link">Skills</a>
-          <a href="projects.html"   class="nav-link">Projects</a>
-        </div>
-        <button id="nav-toggle" aria-expanded="false" aria-label="Toggle menu"
-                class="sm:hidden flex flex-col gap-1.5 p-1 rounded focus:outline-none">
-          <span class="block w-6 h-0.5 bg-gray-600"></span>
-          <span class="block w-6 h-0.5 bg-gray-600"></span>
-          <span class="block w-6 h-0.5 bg-gray-600"></span>
-        </button>
-      </div>
-      <div id="nav-menu" class="sm:hidden hidden px-4 pb-3 flex flex-col gap-3">
-        <a href="index.html"      class="nav-link">Home</a>
-        <a href="experience.html" class="nav-link active">Experience</a>
-        <a href="education.html"  class="nav-link">Education</a>
-        <a href="skills.html"     class="nav-link">Skills</a>
-        <a href="projects.html"   class="nav-link">Projects</a>
-      </div>
-    </nav>
+        <nav
+            class="glass-navbar fixed w-full top-0 z-20 transition-all duration-300"
+        >
+            <div
+                class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between"
+            >
+                <a
+                    href="index.html"
+                    class="transition-opacity hover:opacity-80"
+                >
+                    <img
+                        src="logo-512x512.png"
+                        alt="EMAD'S CV"
+                        class="h-10 w-auto"
+                    />
+                </a>
+                <div class="hidden sm:flex items-center gap-6">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="experience.html" class="nav-link active"
+                        >Experience</a
+                    >
+                    <a href="education.html" class="nav-link">Education</a>
+                    <a href="skills.html" class="nav-link">Skills</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </div>
+                <button
+                    id="nav-toggle"
+                    aria-expanded="false"
+                    aria-label="Toggle menu"
+                    class="sm:hidden flex flex-col gap-1.5 p-1 rounded focus:outline-none"
+                >
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                </button>
+            </div>
+            <div
+                id="nav-menu"
+                class="sm:hidden hidden px-4 pb-3 flex flex-col gap-3"
+            >
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="experience.html" class="nav-link active">Experience</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+            </div>
+        </nav>
 
-    <main class="pt-24 px-4 max-w-5xl mx-auto pb-12 relative z-10">
-      <section class="glass-section p-8" data-aos="fade-up">
-        <h1 class="text-3xl font-bold text-gray-800 border-b-2 border-purple-400 pb-2 mb-8">Experience</h1>
-        <ol class="relative border-l border-purple-300 ml-4">
+        <main class="pt-24 px-4 max-w-5xl mx-auto pb-12 relative z-10">
+            <section class="glass-section p-8" data-aos="fade-up">
+                <h1
+                    class="text-3xl font-bold text-gray-800 border-b-2 border-purple-400 pb-2 mb-8"
+                >
+                    Experience
+                </h1>
+                <ol class="relative border-l border-purple-300 ml-4">
+                    <li class="mb-10 ml-6">
+                        <span
+                            class="timeline-dot absolute flex items-center justify-center w-6 h-6 rounded-full -left-3"
+                        ></span>
+                        <time
+                            class="mb-1 text-sm font-normal leading-none text-gray-500"
+                            >May 2025 (Ordibehesht 1404) – Present</time
+                        >
+                        <h3 class="text-lg font-semibold text-gray-800">
+                            .NET Core Developer at
+                            <a
+                                class="underline text-purple-600 hover:text-purple-700"
+                                href="https://processingworld.com/"
+                                target="_blank"
+                                >Processing World</a
+                            >
+                        </h3>
+                        <p
+                            class="text-base font-normal text-gray-600 about-body"
+                        >
+                            Contributing to the
+                            <span class="tech-pill">backend development</span>
+                            of internal enterprise tools, including
+                            <span class="tech-pill"
+                                >Human Resources Management</span
+                            >
+                            and
+                            <span class="tech-pill">Time &amp; Attendance</span>
+                            systems, using
+                            <span class="tech-pill">ASP.NET Core</span>,
+                            <span class="tech-pill">Entity Framework Core</span
+                            >, and the
+                            <span class="tech-pill">ASP.NET Zero</span>
+                            framework within a
+                            <span class="tech-pill"
+                                >microservices architecture</span
+                            >. Collaborating with a 7-member team through
+                            <span class="tech-pill">Azure DevOps</span> for
+                            source control and task coordination. Actively
+                            learning <span class="tech-pill">Angular</span> by
+                            implementing frontend features alongside backend
+                            development.
+                        </p>
+                    </li>
 
-          <li class="mb-10 ml-6">
-            <span class="timeline-dot absolute flex items-center justify-center w-6 h-6 rounded-full -left-3"></span>
-            <time class="mb-1 text-sm font-normal leading-none text-gray-500">May 2025 (Ordibehesht 1404) – Present</time>
-            <h3 class="text-lg font-semibold text-gray-800">
-              .NET Core Developer at
-              <a class="underline text-purple-600 hover:text-purple-700" href="https://processingworld.com/" target="_blank">Processing World</a>
-            </h3>
-            <p class="text-base font-normal text-gray-600 leading-relaxed">
-              Contributing to the backend development of internal enterprise tools, including Human Resources Management
-              and Time &amp; Attendance systems, using ASP.NET Core, Entity Framework Core, and the ASP.NET Zero framework
-              within a microservices architecture. Collaborating with a 7-member team through Azure DevOps for source
-              control and task coordination. Actively learning Angular by implementing frontend features alongside backend
-              development.
-            </p>
-          </li>
+                    <li class="mb-10 ml-6">
+                        <span
+                            class="timeline-dot absolute flex items-center justify-center w-6 h-6 rounded-full -left-3"
+                        ></span>
+                        <time
+                            class="mb-1 text-sm font-normal leading-none text-gray-500"
+                            >Jul 2024 (Mordad 1403) – Dec 2024 (Azar 1403)</time
+                        >
+                        <h3 class="text-lg font-semibold text-gray-800">
+                            Django Developer at
+                            <a
+                                class="underline text-purple-600 hover:text-purple-700"
+                                target="_blank"
+                                href="https://sarvfaraz.com/"
+                                >Sarvfaraz</a
+                            >
+                        </h3>
+                        <p
+                            class="text-base font-normal text-gray-600 about-body"
+                        >
+                            Developed a comprehensive
+                            <span class="tech-pill">CRM</span> web application
+                            tailored for internal company use, leveraging the
+                            <span class="tech-pill">Django</span> framework
+                            across the entire stack. This involved designing and
+                            implementing robust
+                            <span class="tech-pill">data models</span>
+                            compatible with both
+                            <span class="tech-pill">SQL Server</span> and
+                            <span class="tech-pill">PostgreSQL</span>, building
+                            dynamic user interfaces utilizing Django's
+                            <span class="tech-pill"
+                                >class-based views (CBVs)</span
+                            >
+                            and custom templates, and integrating external
+                            services through
+                            <span class="tech-pill">VoIP AMIs</span> to enhance
+                            communication and workflow management within the CRM
+                            system.
+                        </p>
+                    </li>
 
-          <li class="mb-10 ml-6">
-            <span class="timeline-dot absolute flex items-center justify-center w-6 h-6 rounded-full -left-3"></span>
-            <time class="mb-1 text-sm font-normal leading-none text-gray-500">Jul 2024 (Mordad 1403) – Dec 2024 (Azar 1403)</time>
-            <h3 class="text-lg font-semibold text-gray-800">
-              Django Developer at
-              <a class="underline text-purple-600 hover:text-purple-700" target="_blank" href="https://sarvfaraz.com/">Sarvfaraz</a>
-            </h3>
-            <p class="text-base font-normal text-gray-600 leading-relaxed">
-              Developed a comprehensive CRM web application tailored for internal company use, leveraging the Django
-              framework across the entire stack. This involved designing and implementing robust data models compatible
-              with both SQL Server and PostgreSQL, building dynamic user interfaces utilizing Django's class-based views
-              (CBVs) and custom templates for enhanced flexibility and design, and integrating external services through
-              VoIP AMIs to enhance communication and workflow management within the CRM system.
-            </p>
-          </li>
+                    <li class="mb-10 ml-6">
+                        <span
+                            class="timeline-dot absolute flex items-center justify-center w-6 h-6 rounded-full -left-3"
+                        ></span>
+                        <time
+                            class="mb-1 text-sm font-normal leading-none text-gray-500"
+                            >Jan 2022 (Bahman 1400) – Jul 2024 (Mordad
+                            1403)</time
+                        >
+                        <h3 class="text-lg font-semibold text-gray-800">
+                            .NET Developer at
+                            <a
+                                class="underline text-purple-600 hover:text-purple-700"
+                                target="_blank"
+                                href="https://sarvfaraz.com/"
+                                >Sarvfaraz</a
+                            >
+                        </h3>
+                        <p
+                            class="text-base font-normal text-gray-600 about-body"
+                        >
+                            Led the design and development of a comprehensive
+                            management and accounting application called
+                            <span class="tech-pill">Eren</span>, built on
+                            <span class="tech-pill">.NET Framework</span> with
+                            an
+                            <span class="tech-pill">MVVM architecture</span> and
+                            <span class="tech-pill">SQL Server</span> database
+                            backend. This involved creating a robust desktop
+                            solution to handle daily data entry and management
+                            for end-clients. To enhance data access and
+                            efficiency, I integrated
+                            <span class="tech-pill">Dapper</span> for
+                            streamlined
+                            <span class="tech-pill">database interactions</span>
+                            and other relevant
+                            <span class="tech-pill">.NET libraries</span> to
+                            implement key functionalities.
+                        </p>
+                    </li>
+                </ol>
+            </section>
+        </main>
 
-          <li class="mb-10 ml-6">
-            <span class="timeline-dot absolute flex items-center justify-center w-6 h-6 rounded-full -left-3"></span>
-            <time class="mb-1 text-sm font-normal leading-none text-gray-500">Jan 2022 (Bahman 1400) – Jul 2024 (Mordad 1403)</time>
-            <h3 class="text-lg font-semibold text-gray-800">
-              .NET Developer at
-              <a class="underline text-purple-600 hover:text-purple-700" target="_blank" href="https://sarvfaraz.com/">Sarvfaraz</a>
-            </h3>
-            <p class="text-base font-normal text-gray-600 leading-relaxed">
-              Led the design and development of a comprehensive management and accounting application called Eren, built on
-              .NET framework with an MVVM architecture and SQL Server database backend. This involved creating a robust and
-              user-friendly desktop solution to handle daily data entry and management for end-clients. To enhance data
-              access and efficiency, I integrated libraries such as Dapper for streamlined database interactions and other
-              relevant .NET libraries to implement key functionalities.
-            </p>
-          </li>
-
-        </ol>
-      </section>
-    </main>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="main.js"></script>
-  </body>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="main.js"></script>
+    </body>
 </html>

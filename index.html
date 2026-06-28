@@ -3,6 +3,24 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="64x64"
+            href="favicon-64x64.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="favicon-16x16.png"
+        />
         <title>EMAD's CV</title>
         <link
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Inter:wght@600;700&display=swap"
@@ -34,9 +52,14 @@
             >
                 <a
                     href="index.html"
-                    class="text-lg font-semibold text-purple-600 hover:text-purple-700 transition-colors"
-                    >EMAD'S CV</a
+                    class="transition-opacity hover:opacity-80"
                 >
+                    <img
+                        src="logo-512x512.png"
+                        alt="EMAD'S CV"
+                        class="h-10 w-auto"
+                    />
+                </a>
                 <div class="hidden sm:flex items-center gap-6">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="experience.html" class="nav-link">Experience</a>
@@ -81,7 +104,7 @@
                         </p>
                     </div>
                     <img
-                        src="https://avatars.githubusercontent.com/u/87330040?v=4"
+                        src="avatar.png"
                         alt="Emad Ghosi"
                         class="profile-img size-52 rounded-full ring-4 ring-purple-400 transition-all duration-300 hover:scale-110 hover:ring-purple-500"
                     />
@@ -91,19 +114,35 @@
             <!-- About -->
             <section class="glass-section mb-8 p-8" data-aos="fade-right">
                 <h2
-                    class="text-2xl font-semibold border-b-2 border-purple-400 pb-2 mb-4 text-gray-800"
+                    class="text-2xl font-semibold border-b-2 border-purple-400 pb-2 mb-6 text-gray-800"
                 >
                     About Me
                 </h2>
-                <p class="text-gray-600 text-lg leading-relaxed">
-                    Enthusiastic software developer with <b>4+ years</b> of
-                    experience in Back-end development. Skilled in
-                    <b>various programming languages</b> and technologies, I'm a
-                    resourceful <b>problem-solver</b> who thrives in any
-                    environment. I bring a strong <b>work ethic</b> and passion
-                    for <b>innovation</b> to tackle new challenges and utilize
-                    available tools to find <b>optimal solutions</b>.
-                </p>
+
+                <!-- quote block -->
+                <div class="relative">
+                    <span class="about-quote">&ldquo;</span>
+                    <p class="text-gray-600 text-lg pl-10 about-body">
+                        I&rsquo;m a <span class="tech-pill">C#</span> /
+                        <span class="tech-pill">.NET</span> developer with over
+                        <span class="tech-pill">5+ years</span> of experience
+                        building enterprise applications. My primary focus is
+                        backend development with
+                        <span class="tech-pill">ASP.NET Core</span>, while also
+                        working with
+                        <span class="tech-pill">Entity Framework Core</span>,
+                        <span class="tech-pill">SQL Server</span>,
+                        <span class="tech-pill">REST APIs</span>,
+                        <span class="tech-pill">Docker</span>, and
+                        <span class="tech-pill">unit testing</span>. I enjoy
+                        designing
+                        <span class="tech-pill">clean architectures</span>,
+                        improving
+                        <span class="tech-pill">application performance</span>,
+                        and learning modern technologies to build better
+                        software.
+                    </p>
+                </div>
             </section>
 
             <!-- Quick-nav cards -->
@@ -190,30 +229,34 @@
             </div>
 
             <!-- Contact -->
-            <section class="glass-section text-center p-8" data-aos="zoom-in">
-                <h2
+            <section class="glass-section text-center p-4" data-aos="zoom-in">
+                <!--<h2
                     class="text-2xl font-semibold border-b-2 border-purple-400 pb-2 mb-4 text-gray-800"
                 >
                     Contact
-                </h2>
+                </h2>-->
                 <div class="flex flex-wrap justify-center gap-4">
                     <a
+                        id="email-link"
                         href="mailto:Ghosi.Emad@Gmail.com"
                         class="text-purple-600 hover:text-purple-700 font-medium transition-colors"
                         >Email</a
                     >
                     <a
+                        id="phone-link"
                         href="tel:09214113572"
                         class="text-purple-600 hover:text-purple-700 font-medium transition-colors"
                         >Phone</a
                     >
                     <a
+                        id="linkedin-link"
                         href="https://www.linkedin.com/in/emad-ghosi-a16a78254/"
                         target="_blank"
                         class="text-purple-600 hover:text-purple-700 font-medium transition-colors"
                         >LinkedIn</a
                     >
                     <a
+                        id="github-link"
                         href="https://github.com/Emadg-dev"
                         target="_blank"
                         class="text-purple-600 hover:text-purple-700 font-medium transition-colors"
@@ -222,6 +265,206 @@
                 </div>
             </section>
         </main>
+
+        <!-- Phone popup -->
+        <div
+            id="phone-popup"
+            class="phone-popup"
+            hidden
+            role="dialog"
+            aria-label="Phone number"
+        >
+            <!-- arrow -->
+            <div class="phone-popup-arrow" id="phone-popup-arrow"></div>
+            <p class="phone-popup-label">Phone</p>
+            <p class="phone-popup-number">0921 411 3572</p>
+            <div class="phone-popup-actions">
+                <a
+                    href="tel:09214113572"
+                    class="phone-popup-btn phone-popup-call"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                            clip-rule="evenodd"
+                        />
+                    </svg>
+                    Call
+                </a>
+                <button
+                    class="phone-popup-btn phone-popup-copy"
+                    id="phone-copy-btn"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 013.75 3.75v1.875C13.5 8.161 14.34 9 15.375 9h1.875A3.75 3.75 0 0121 12.75v3.375C21 17.16 20.16 18 19.125 18h-9.75A1.875 1.875 0 017.5 16.125V3.375z"
+                        />
+                        <path
+                            d="M15 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0017.25 7.5h-1.875A.375.375 0 0115 7.125V5.25zM4.875 6H6v10.125A3.375 3.375 0 009.375 19.5H16.5v1.125c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 013 20.625V7.875C3 6.839 3.84 6 4.875 6z"
+                        />
+                    </svg>
+                    <span>Copy</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Email popup -->
+        <div
+            id="email-popup"
+            class="phone-popup"
+            hidden
+            role="dialog"
+            aria-label="Email address"
+        >
+            <div class="phone-popup-arrow" id="email-popup-arrow"></div>
+            <p class="phone-popup-label">Email</p>
+            <p class="phone-popup-number popup-text-sm">Ghosi.Emad@Gmail.com</p>
+            <div class="phone-popup-actions">
+                <a
+                    href="mailto:Ghosi.Emad@Gmail.com"
+                    class="phone-popup-btn phone-popup-call"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"
+                        />
+                        <path
+                            d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"
+                        />
+                    </svg>
+                    Send
+                </a>
+                <button
+                    class="phone-popup-btn phone-popup-copy"
+                    id="email-copy-btn"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 013.75 3.75v1.875C13.5 8.161 14.34 9 15.375 9h1.875A3.75 3.75 0 0121 12.75v3.375C21 17.16 20.16 18 19.125 18h-9.75A1.875 1.875 0 017.5 16.125V3.375z"
+                        />
+                        <path
+                            d="M15 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0017.25 7.5h-1.875A.375.375 0 0115 7.125V5.25zM4.875 6H6v10.125A3.375 3.375 0 009.375 19.5H16.5v1.125c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 013 20.625V7.875C3 6.839 3.84 6 4.875 6z"
+                        />
+                    </svg>
+                    <span>Copy</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- LinkedIn popup -->
+        <div
+            id="linkedin-popup"
+            class="phone-popup"
+            hidden
+            role="dialog"
+            aria-label="LinkedIn profile"
+        >
+            <div class="phone-popup-arrow" id="linkedin-popup-arrow"></div>
+            <p class="phone-popup-label">LinkedIn</p>
+            <p class="phone-popup-number popup-text-sm">Emad Ghosi</p>
+            <div class="phone-popup-actions">
+                <a
+                    href="https://www.linkedin.com/in/emad-ghosi-a16a78254/"
+                    target="_blank"
+                    class="phone-popup-btn phone-popup-call"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"
+                        />
+                    </svg>
+                    View
+                </a>
+                <button
+                    class="phone-popup-btn phone-popup-copy"
+                    id="linkedin-copy-btn"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 013.75 3.75v1.875C13.5 8.161 14.34 9 15.375 9h1.875A3.75 3.75 0 0121 12.75v3.375C21 17.16 20.16 18 19.125 18h-9.75A1.875 1.875 0 017.5 16.125V3.375z"
+                        />
+                        <path
+                            d="M15 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0017.25 7.5h-1.875A.375.375 0 0115 7.125V5.25zM4.875 6H6v10.125A3.375 3.375 0 009.375 19.5H16.5v1.125c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 013 20.625V7.875C3 6.839 3.84 6 4.875 6z"
+                        />
+                    </svg>
+                    <span>Copy</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- GitHub popup -->
+        <div
+            id="github-popup"
+            class="phone-popup"
+            hidden
+            role="dialog"
+            aria-label="GitHub profile"
+        >
+            <div class="phone-popup-arrow" id="github-popup-arrow"></div>
+            <p class="phone-popup-label">GitHub</p>
+            <p class="phone-popup-number popup-text-sm">Emadg-dev</p>
+            <div class="phone-popup-actions">
+                <a
+                    href="https://github.com/Emadg-dev"
+                    target="_blank"
+                    class="phone-popup-btn phone-popup-call"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"
+                        />
+                    </svg>
+                    View
+                </a>
+                <button
+                    class="phone-popup-btn phone-popup-copy"
+                    id="github-copy-btn"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 013.75 3.75v1.875C13.5 8.161 14.34 9 15.375 9h1.875A3.75 3.75 0 0121 12.75v3.375C21 17.16 20.16 18 19.125 18h-9.75A1.875 1.875 0 017.5 16.125V3.375z"
+                        />
+                        <path
+                            d="M15 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0017.25 7.5h-1.875A.375.375 0 0115 7.125V5.25zM4.875 6H6v10.125A3.375 3.375 0 009.375 19.5H16.5v1.125c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 013 20.625V7.875C3 6.839 3.84 6 4.875 6z"
+                        />
+                    </svg>
+                    <span>Copy</span>
+                </button>
+            </div>
+        </div>
 
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script src="main.js"></script>
