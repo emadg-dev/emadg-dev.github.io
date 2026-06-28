@@ -239,3 +239,19 @@ AOS.init({ duration: 800, once: true });
     }),
   );
 })();
+
+function openRecord(imageSrc, titleCaption) {
+  const modal = document.getElementById('image-modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalCaption = document.getElementById('modal-caption');
+  
+  if (modal && modalImg) {
+      modalImg.src = imageSrc;
+      if (modalCaption) modalCaption.textContent = titleCaption;
+      
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+          modal.classList.remove('opacity-0');
+      }, 10);
+  }
+}
