@@ -1,4 +1,104 @@
-/* ── Base ─────────────────────────────────────────── */
+/* ── Page loader ─────────────────────────────────── */
+#page-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        135deg,
+        #fce4ec 0%,
+        #e1f5fe 25%,
+        #f3e5f5 50%,
+        #fff9c4 75%,
+        #e8f5e9 100%
+    );
+    transition:
+        opacity 0.55s ease,
+        visibility 0.55s ease;
+}
+
+#page-loader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-frame {
+    position: relative;
+    width: 148px;
+    height: 148px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* fast inner ring – clockwise, purple */
+.loader-ring-1 {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #9333ea;
+    border-right-color: #c084fc;
+    animation: loader-spin 1s linear infinite;
+}
+
+/* slow outer ring – counter-clockwise, faint */
+.loader-ring-2 {
+    position: absolute;
+    inset: -11px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-bottom-color: rgba(192, 132, 252, 0.45);
+    border-left-color: rgba(147, 51, 234, 0.25);
+    animation: loader-spin 1.9s linear infinite reverse;
+}
+
+@keyframes loader-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* glass disc behind the logo */
+.loader-glass {
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow:
+        0 8px 32px rgba(147, 51, 234, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.loader-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    animation: loader-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes loader-pulse {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.88);
+        opacity: 0.75;
+    }
+}
+
+/* ── Base ──────────────────────────────────────────────── */
 body {
     font-family: "Roboto", sans-serif;
     background: linear-gradient(

@@ -1,3 +1,34 @@
+// ── Page loader ────────────────────────────────
+(function () {
+  const loader = document.getElementById("page-loader");
+  if (!loader) return;
+
+  function dismiss() {
+    loader.classList.add("fade-out");
+    // Remove from DOM after transition so it doesn't block interaction
+    setTimeout(() => loader.remove(), 600);
+  }
+
+  // Dismiss as soon as all resources (images, fonts, scripts) are done
+  if (document.readyState === "complete") {
+    dismiss();
+  } else {
+    window.addEventListener("load", dismiss, { once: true });
+  }
+
+  // Hard timeout – never block the page for more than 5 s
+  setTimeout(dismiss, 5000);
+})();
+
+// ── Service Worker (PWA) ────────────────────────
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/service-worker.js")
+      .catch((err) => console.warn("SW registration failed:", err));
+  });
+}
+
 // ── AOS (scroll animations) ───────────────────────
 AOS.init({ duration: 800, once: true });
 

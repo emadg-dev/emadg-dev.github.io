@@ -33,8 +33,26 @@
             href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
         <link rel="stylesheet" href="styles.css" />
+        <link rel="manifest" href="manifest.json" />
+        <meta name="theme-color" content="#9333ea" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+        />
+        <meta name="apple-mobile-web-app-title" content="EMAD'S CV" />
     </head>
     <body class="text-gray-700">
+        <!-- Page loader -->
+        <div id="page-loader" aria-hidden="true">
+            <div class="loader-frame">
+                <div class="loader-ring-1"></div>
+                <div class="loader-ring-2"></div>
+                <div class="loader-glass">
+                    <img src="logo-512x512.png" alt="" class="loader-logo" />
+                </div>
+            </div>
+        </div>
         <div class="shape shape-circle shape1"></div>
         <div class="shape shape-square shape2"></div>
         <div class="shape shape-circle shape3"></div>
@@ -106,7 +124,7 @@
                         <span>Python</span>
                     </div>
                     <div class="skill-badge">
-                        <i class="devicon-dot-net-plain colored"></i>
+                        <i class="devicon-dotnetcore-plain colored"></i>
                         <span>.NET Core</span>
                     </div>
                     <div class="skill-badge">
